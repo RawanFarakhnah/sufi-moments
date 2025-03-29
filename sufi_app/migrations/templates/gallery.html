@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufi Cafe Gallery</title>
+    <link rel="icon" href="https://scontent.fjrs24-1.fna.fbcdn.net/v/t39.30808-6/326507776_5318597811574309_7787856289547012991_n.png?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iKbkx2p2BDsQ7kNvgG16Mbe&_nc_oc=AdnQmcyaYc1KnTNgUeN1UhoNIO_tdBUxJsxMyQXgWEzjgbrdIiDBb9sFN1zXcap8EWA&_nc_zt=23&_nc_ht=scontent.fjrs24-1.fna&_nc_gid=KjfOmgKI3QKTXiaPHTtFrA&oh=00_AYF1sQ0tdMbRM_Xw8K0PGsj_GwTG19LXH3qrRGpW434qTg&oe=67E8F6A1" type="image/png" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+   
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f5f0;
+            color: #4a3b2f;
+        }
+        .navbar {
+            background-color: rgb(36, 75, 74);
+        }
+        .navbar-brand, .nav-link {
+            color: rgb(193, 148, 61) !important;
+            font-weight: bold;
+        }
+        .btn-gold {
+            color:white !important;
+            background-color: rgb(193, 148, 61) !important;
+            border-radius: 10px;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?coffee,cafe') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            z-index: 2;
+            position: relative;
+            animation: fadeInUp 1.5s;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gallery-section {
+            padding: 50px 0;
+        }
+        .gallery-card {
+            transition: transform 0.3s;
+        }
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+        .gallery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://scontent.fjrs24-1.fna.fbcdn.net/v/t39.30808-6/326507776_5318597811574309_7787856289547012991_n.png?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iKbkx2p2BDsQ7kNvgG16Mbe&_nc_oc=AdnQmcyaYc1KnTNgUeN1UhoNIO_tdBUxJsxMyQXgWEzjgbrdIiDBb9sFN1zXcap8EWA&_nc_zt=23&_nc_ht=scontent.fjrs24-1.fna&_nc_gid=KjfOmgKI3QKTXiaPHTtFrA&oh=00_AYF1sQ0tdMbRM_Xw8K0PGsj_GwTG19LXH3qrRGpW434qTg&oe=67E8F6A1"
+                 alt="Sufi Cafe logo"
+                 width="30"
+                 height="30">    
+                Sufi Cafe
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-gold" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-secondary" href="#">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Gallery</h1>
+    </div>
+
+    <section class="gallery-section text-center">
+        <h2 class="mb-5">Explore Our Coffee Moments</h2>
+        <div class="container">
+            <div class="row">
+                <!-- Gallery Images -->
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="https://source.unsplash.com/400x300/?coffee,barista" class="gallery-image card-img-top" alt="Gallery Image">
+                        <div class="card-body">
+                            <p class="card-text">The perfect brew made just for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="https://source.unsplash.com/400x300/?coffee,latte" class="gallery-image card-img-top" alt="Gallery Image">
+                        <div class="card-body">
+                            <p class="card-text">A latte, warm and comforting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="https://source.unsplash.com/400x300/?coffee,espresso" class="gallery-image card-img-top" alt="Gallery Image">
+                        <div class="card-body">
+                            <p class="card-text">A shot of rich espresso.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
