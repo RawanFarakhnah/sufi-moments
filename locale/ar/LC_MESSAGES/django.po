@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-30 01:32+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: .\accounts\forms.py:10 .\accounts\forms.py:58
+msgid "Email"
+msgstr ""
+
+#: .\accounts\forms.py:11 .\accounts\forms.py:59
+msgid "Email address"
+msgstr ""
+
+#: .\accounts\forms.py:16
+msgid "First Name (English)"
+msgstr ""
+
+#: .\accounts\forms.py:17
+msgid "First name in English"
+msgstr ""
+
+#: .\accounts\forms.py:22
+msgid "Last Name (English)"
+msgstr ""
+
+#: .\accounts\forms.py:23
+msgid "Last name in English"
+msgstr ""
+
+#: .\accounts\forms.py:28
+msgid "First Name (Arabic)"
+msgstr ""
+
+#: .\accounts\forms.py:29
+msgid "First name in Arabic"
+msgstr ""
+
+#: .\accounts\forms.py:34
+msgid "Last Name (Arabic)"
+msgstr ""
+
+#: .\accounts\forms.py:35
+msgid "Last name in Arabic"
+msgstr ""
+
+#: .\accounts\forms.py:47 .\accounts\forms.py:62 .\accounts\forms.py:63
+msgid "Password"
+msgstr ""
+
+#: .\accounts\forms.py:48
+msgid "Password Confirmation"
+msgstr ""
+
+#: .\accounts\forms.py:69
+msgid ""
+"Please enter a correct email and password. Note that both fields may be case-"
+"sensitive."
+msgstr ""
+
+#: .\accounts\models.py:9
+msgid "email address"
+msgstr ""
+
+#: .\accounts\models.py:12
+msgid "first name (English)"
+msgstr ""
+
+#: .\accounts\models.py:13
+msgid "last name (English)"
+msgstr ""
+
+#: .\accounts\models.py:16
+msgid "first name (Arabic)"
+msgstr ""
+
+#: .\accounts\models.py:17
+msgid "last name (Arabic)"
+msgstr ""
+
+#: .\accounts\models.py:20
+msgid "admin status"
+msgstr ""
+
+#: .\accounts\models.py:47
+msgid "user"
+msgstr ""
+
+#: .\accounts\models.py:48
+msgid "users"
+msgstr ""
+
+#: .\accounts\views.py:17
+msgid "Registration successful! Please log in."
+msgstr ""
+
+#: .\accounts\views.py:29
+msgid "You have successfully logged in!"
+msgstr ""
+
+#: .\accounts\views.py:32
+msgid "Invalid email or password."
+msgstr ""
+
+#: .\accounts\views.py:40
+msgid "You have been logged out."
+msgstr ""
+
+#: .\events\forms.py:10
+msgid "Event Name (English)"
+msgstr ""
+
+#: .\events\forms.py:14
+msgid "Description (English)"
+msgstr ""
+
+#: .\events\forms.py:20
+msgid "اسم الفعالية (عربي)"
+msgstr ""
+
+#: .\events\forms.py:24
+msgid "الوصف (عربي)"
+msgstr ""
+
+#: .\events\forms.py:30
+msgid "Start Date/Time"
+msgstr ""
+
+#: .\events\forms.py:42
+msgid "End Date/Time"
+msgstr ""
+
+#: .\events\forms.py:71
+msgid "Must be after start time"
+msgstr ""
+
+#: .\events\forms.py:87
+msgid "Event date cannot be in the past"
+msgstr ""
+
+#: .\events\forms.py:92
+msgid "End time must be after start time"
+msgstr ""
+
+#: .\events\forms.py:107
+msgid "Attendance Status"
+msgstr ""
+
+#: .\events\forms.py:114 .\events\models.py:71
+msgid "Going"
+msgstr ""
+
+#: .\events\forms.py:115 .\events\models.py:72
+msgid "Interested"
+msgstr ""
+
+#: .\events\forms.py:116 .\events\models.py:73
+msgid "Not Going"
+msgstr ""
+
+#: .\events\models.py:7
+msgid "type name (English)"
+msgstr ""
+
+#: .\events\models.py:8
+msgid "type name (Arabic)"
+msgstr ""
+
+#: .\events\models.py:9 .\events\models.py:25
+msgid "description (English)"
+msgstr ""
+
+#: .\events\models.py:10 .\events\models.py:29
+msgid "description (Arabic)"
+msgstr ""
+
+#: .\events\models.py:24
+msgid "name (English)"
+msgstr ""
+
+#: .\events\models.py:28
+msgid "name (Arabic)"
+msgstr ""
+
+#: .\events\models.py:32
+msgid "organized by"
+msgstr ""
+
+#: .\events\models.py:33
+msgid "start date"
+msgstr ""
+
+#: .\events\models.py:34
+msgid "end date"
+msgstr ""
+
+#: .\events\models.py:35
+msgid "location"
+msgstr ""
+
+#: .\events\models.py:38
+msgid "image"
+msgstr ""
+
+#: .\events\models.py:63
+#, python-brace-format
+msgid "{hours} hr {minutes} min"
+msgstr ""
+
+#: .\events\models.py:78
+msgid "status"
+msgstr ""
+
+#: .\events\models.py:85
+msgid "RSVP"
+msgstr ""
+
+#: .\events\models.py:86
+msgid "RSVPs"
+msgstr ""
+
+#: .\events\models.py:96
+#, python-brace-format
+msgid "{user} RSVP'd for {event} as {status}"
+msgstr ""
+
+#: .\events\views.py:31
+msgid "Event type created successfully!"
+msgstr ""
+
+#: .\events\views.py:41
+msgid "Event type updated successfully!"
+msgstr ""
+
+#: .\events\views.py:50
+msgid "Event type deleted successfully!"
+msgstr ""
+
+#: .\events\views.py:116
+msgid "Event created successfully!"
+msgstr ""
+
+#: .\events\views.py:128
+msgid "Event updated successfully!"
+msgstr ""
+
+#: .\events\views.py:134
+msgid "You don't have permission to edit this event."
+msgstr ""
+
+#: .\events\views.py:144
+msgid "Event deleted successfully!"
+msgstr ""
+
+#: .\events\views.py:150
+msgid "You don't have permission to delete this event."
+msgstr ""
+
+#: .\events\views.py:167
+msgid "You have already RSVP'd for this event."
+msgstr ""
+
+#: .\events\views.py:170
+msgid "Thank you for your RSVP!"
+msgstr ""
+
+#: .\events\views.py:186
+msgid "RSVP updated successfully!"
+msgstr ""
+
+#: .\events\views.py:201
+msgid "RSVP removed successfully!"
+msgstr ""
+
+#: .\templates\base.html:22
+msgid "Welcome to Sufi Moments"
+msgstr ""
+
+#: .\templates\base.html:23
+msgid "Enjoy Fairouz music evenings with us"
+msgstr ""
