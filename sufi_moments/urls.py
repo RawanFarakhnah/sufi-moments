@@ -13,8 +13,9 @@ urlpatterns = [
 
 # URLs that SHOULD be language-prefixed /en/ or /ar/
 urlpatterns += i18n_patterns(
-    path('', include('landing.urls')),         
+    path('', include('landing.urls')),
     path('events/', include('events.urls')),    
     path('memories/', include('memories.urls')),
+    path('accounts/', include('accounts.urls')),  
     prefix_default_language=False
 )

@@ -4,7 +4,7 @@ from . import views
 app_name = 'memories'
 
 urlpatterns = [
-    path('', views.memory_list, name='memory_list'),
+    path('', views.memory_list, name='list'),
     path('create/', views.memory_create, name='memory_create'),
     path('<int:pk>/', views.memory_detail, name='memory_detail'),
     path('<int:pk>/update/', views.memory_update, name='memory_update'),

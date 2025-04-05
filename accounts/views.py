@@ -1,45 +1,68 @@
+
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.decorators import login_required
-from django.views.generic import CreateView
-from django.urls import reverse_lazy
-from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
-from .forms import UserRegistrationForm, UserLoginForm
+from .models import User
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth import authenticate, login, logout
+import bcrypt
 
-class RegisterView(CreateView):
-    form_class = UserRegistrationForm
-    template_name = 'accounts/register.html'
-    success_url = reverse_lazy('accounts:login')
+def user_register(request):
+    if request.user.is_authenticated:
+        return redirect('landing:dashbord')
+    
+    if request.method == 'POST':
+        errors = User.objects.register_validator(request.POST)
 
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        messages.success(self.request, _('Registration successful! Please log in.'))
-        return response
+        if errors:
+            for key, value in errors.items():
+                messages.error(request, value)
+            return redirect('landing:register')
+
+        user = User.objects.create(
+            first_name_en=request.POST['first_name_en'],
+            last_name_en=request.POST['last_name_en'],
+            first_name_ar=request.POST['first_name_ar'],
+            last_name_ar=request.POST['last_name_ar'],
+            email=request.POST['email'],
+            password=make_password(request.POST['password']),
+        )
+
+        login(request, user)  # automatically saves user in session
+        messages.success(request, "Registered Successfully")
+        return redirect('landing:dashbord')
+
+    return render(request, 'accounts/register.html')
 
 def user_login(request):
+    if request.user.is_authenticated:
+        return redirect('landing:dashbord')
+
     if request.method == 'POST':
-        form = UserLoginForm(request, data=request.POST)
-        if form.is_valid():
-            email = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(request, email=email, password=password)
-            if user is not None:
-                login(request, user)
-                messages.success(request, _('You have successfully logged in!'))
-                return redirect('home')  # Change 'home' to your desired redirect URL
-        else:
-            messages.error(request, _('Invalid email or password.'))
-    else:
-        form = UserLoginForm()
-    return render(request, 'accounts/login.html', {'form': form})
+        email = request.POST.get('email')
+        password = request.POST.get('password')
 
-@login_required
+        user = authenticate(email=email, password=password)
+
+        if user is None:
+            messages.error(request, "Email or Password is incorrect", extra_tags="login")
+            return redirect('landing:login')
+
+        login(request, user)
+        messages.success(request, "Logged in Successfully")
+        return redirect('landing:dashbord')
+
+    return render(request, 'accounts/login.html')
+
+def user_profile(request):
+    if not request.user.is_authenticated:
+        return redirect('landing:home')
+    
+    #user = User.objects.get(id=request.session['user_id']) 
+    return render(request, 'accounts/profile.html', {'user': request.user})
+
 def user_logout(request):
-    logout(request)
-    messages.success(request, _('You have been logged out.'))
-    return redirect('accounts:login')
+   if not request.user.is_authenticated:
+        return redirect('landing:home')
 
-@login_required
-def profile(request):
-    return render(request, 'accounts/profile.html')
+   logout(request)
+   return redirect('landing:home')

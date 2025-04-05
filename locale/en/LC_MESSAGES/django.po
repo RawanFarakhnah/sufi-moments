@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-30 01:32+0200\n"
+"POT-Creation-Date: 2025-04-02 11:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\accounts\forms.py:10 .\accounts\forms.py:58
 msgid "Email"
 msgstr ""
@@ -285,10 +286,94 @@ msgstr ""
 msgid "RSVP removed successfully!"
 msgstr ""
 
-#: .\templates\base.html:22
-msgid "Welcome to Sufi Moments"
+#: .\templates\base.html:40
+msgid "Memories"
 msgstr ""
 
-#: .\templates\base.html:23
-msgid "Enjoy Fairouz music evenings with us"
+#: .\templates\base.html:41
+msgid "Events"
+msgstr ""
+
+#: .\templates\base.html:50
+msgid "Profile"
+msgstr ""
+
+#: .\templates\base.html:52
+msgid "Logout"
+msgstr ""
+
+#: .\templates\base.html:56
+msgid "Login"
+msgstr ""
+
+#: .\templates\base.html:57
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\base.html:74
+msgid "About Sufi Moments"
+msgstr ""
+
+#: .\templates\base.html:75
+msgid "Preserving the magic of Sufi Cafe through shared memories."
+msgstr ""
+
+#: .\templates\base.html:78
+msgid "Quick Links"
+msgstr ""
+
+#: .\templates\base.html:80
+msgid "Home"
+msgstr ""
+
+#: .\templates\base.html:81
+msgid "Share Memory"
+msgstr ""
+
+#: .\templates\base.html:85
+msgid "Connect"
+msgstr ""
+
+#: .\templates\landing\home.html:12
+msgid "Discover the Magic of Sufi Cafe"
+msgstr ""
+
+#: .\templates\landing\home.html:13
+msgid "Share your special moments and connect with our community"
+msgstr ""
+
+#: .\templates\landing\home.html:15
+msgid "Join Now"
+msgstr ""
+
+#: .\templates\landing\home.html:17
+msgid "Explore Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:27
+msgid "Recent Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:28
+msgid "Moments shared by our community"
+msgstr ""
+
+#: .\templates\landing\home.html:38
+msgid "View"
+msgstr ""
+
+#: .\templates\landing\home.html:57
+msgid "View All Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:66
+msgid "Upcoming Events"
+msgstr ""
+
+#: .\templates\landing\home.html:67
+msgid "Join us for these special gatherings"
+msgstr ""
+
+#: .\templates\landing\home.html:84
+msgid "Details"
 msgstr ""

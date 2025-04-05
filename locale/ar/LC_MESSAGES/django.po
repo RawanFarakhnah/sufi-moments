@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-30 01:32+0200\n"
+"POT-Creation-Date: 2025-04-02 13:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,55 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-#: .\accounts\forms.py:10 .\accounts\forms.py:58
+
+#: .\accounts\forms.py:24
 msgid "Email"
 msgstr ""
 
-#: .\accounts\forms.py:11 .\accounts\forms.py:59
+#: .\accounts\forms.py:25
 msgid "Email address"
 msgstr ""
 
-#: .\accounts\forms.py:16
-msgid "First Name (English)"
-msgstr ""
-
-#: .\accounts\forms.py:17
-msgid "First name in English"
-msgstr ""
-
-#: .\accounts\forms.py:22
-msgid "Last Name (English)"
-msgstr ""
-
-#: .\accounts\forms.py:23
-msgid "Last name in English"
-msgstr ""
-
-#: .\accounts\forms.py:28
-msgid "First Name (Arabic)"
-msgstr ""
-
-#: .\accounts\forms.py:29
-msgid "First name in Arabic"
-msgstr ""
-
-#: .\accounts\forms.py:34
-msgid "Last Name (Arabic)"
-msgstr ""
-
-#: .\accounts\forms.py:35
-msgid "Last name in Arabic"
-msgstr ""
-
-#: .\accounts\forms.py:47 .\accounts\forms.py:62 .\accounts\forms.py:63
+#: .\accounts\forms.py:28 .\accounts\forms.py:29
 msgid "Password"
 msgstr ""
 
-#: .\accounts\forms.py:48
-msgid "Password Confirmation"
-msgstr ""
-
-#: .\accounts\forms.py:69
+#: .\accounts\forms.py:35
 msgid ""
 "Please enter a correct email and password. Note that both fields may be case-"
 "sensitive."
@@ -104,22 +69,6 @@ msgstr ""
 msgid "users"
 msgstr ""
 
-#: .\accounts\views.py:17
-msgid "Registration successful! Please log in."
-msgstr ""
-
-#: .\accounts\views.py:29
-msgid "You have successfully logged in!"
-msgstr ""
-
-#: .\accounts\views.py:32
-msgid "Invalid email or password."
-msgstr ""
-
-#: .\accounts\views.py:40
-msgid "You have been logged out."
-msgstr ""
-
 #: .\events\forms.py:10
 msgid "Event Name (English)"
 msgstr ""
@@ -140,36 +89,20 @@ msgstr ""
 msgid "Start Date/Time"
 msgstr ""
 
-#: .\events\forms.py:42
+#: .\events\forms.py:34
 msgid "End Date/Time"
 msgstr ""
 
-#: .\events\forms.py:71
-msgid "Must be after start time"
-msgstr ""
-
-#: .\events\forms.py:87
+#: .\events\forms.py:55
 msgid "Event date cannot be in the past"
 msgstr ""
 
-#: .\events\forms.py:92
+#: .\events\forms.py:58
 msgid "End time must be after start time"
 msgstr ""
 
-#: .\events\forms.py:107
+#: .\events\forms.py:70
 msgid "Attendance Status"
-msgstr ""
-
-#: .\events\forms.py:114 .\events\models.py:71
-msgid "Going"
-msgstr ""
-
-#: .\events\forms.py:115 .\events\models.py:72
-msgid "Interested"
-msgstr ""
-
-#: .\events\forms.py:116 .\events\models.py:73
-msgid "Not Going"
 msgstr ""
 
 #: .\events\models.py:7
@@ -221,6 +154,18 @@ msgstr ""
 msgid "{hours} hr {minutes} min"
 msgstr ""
 
+#: .\events\models.py:71
+msgid "Going"
+msgstr ""
+
+#: .\events\models.py:72
+msgid "Interested"
+msgstr ""
+
+#: .\events\models.py:73
+msgid "Not Going"
+msgstr ""
+
 #: .\events\models.py:78
 msgid "status"
 msgstr ""
@@ -238,58 +183,131 @@ msgstr ""
 msgid "{user} RSVP'd for {event} as {status}"
 msgstr ""
 
-#: .\events\views.py:31
-msgid "Event type created successfully!"
+#: .\memories\views.py:14
+msgid "Memory created successfully!"
 msgstr ""
 
-#: .\events\views.py:41
-msgid "Event type updated successfully!"
+#: .\memories\views.py:29
+msgid "Memory updated successfully!"
 msgstr ""
 
-#: .\events\views.py:50
-msgid "Event type deleted successfully!"
+#: .\memories\views.py:41
+msgid "Memory deleted successfully!"
 msgstr ""
 
-#: .\events\views.py:116
-msgid "Event created successfully!"
+#: .\templates\accounts\login.html:5 .\templates\accounts\register.html:2
+#: .\templates\accounts\register.html:6
+msgid "Register"
 msgstr ""
 
-#: .\events\views.py:128
-msgid "Event updated successfully!"
+#: .\templates\accounts\login.html:13 .\templates\base.html:57
+msgid "Login"
 msgstr ""
 
-#: .\events\views.py:134
-msgid "You don't have permission to edit this event."
+#: .\templates\accounts\login.html:15
+msgid "Don't have an account? Register"
 msgstr ""
 
-#: .\events\views.py:144
-msgid "Event deleted successfully!"
+#: .\templates\accounts\profile.html:2
+msgid "Welcome,"
 msgstr ""
 
-#: .\events\views.py:150
-msgid "You don't have permission to delete this event."
+#: .\templates\accounts\profile.html:4
+msgid "email"
 msgstr ""
 
-#: .\events\views.py:167
-msgid "You have already RSVP'd for this event."
+#: .\templates\accounts\profile.html:5 .\templates\accounts\profile.html:6
+msgid "last_name_en"
 msgstr ""
 
-#: .\events\views.py:170
-msgid "Thank you for your RSVP!"
+#: .\templates\accounts\profile.html:8
+msgid "logout"
 msgstr ""
 
-#: .\events\views.py:186
-msgid "RSVP updated successfully!"
+#: .\templates\base.html:41
+msgid "Memories"
 msgstr ""
 
-#: .\events\views.py:201
-msgid "RSVP removed successfully!"
+#: .\templates\base.html:42
+msgid "Events"
 msgstr ""
 
-#: .\templates\base.html:22
-msgid "Welcome to Sufi Moments"
+#: .\templates\base.html:51
+msgid "Profile"
 msgstr ""
 
-#: .\templates\base.html:23
-msgid "Enjoy Fairouz music evenings with us"
+#: .\templates\base.html:53
+msgid "Logout"
+msgstr ""
+
+#: .\templates\base.html:58
+msgid "Sign Up"
+msgstr ""
+
+#: .\templates\base.html:75
+msgid "About Sufi Moments"
+msgstr ""
+
+#: .\templates\base.html:76
+msgid "Preserving the magic of Sufi Cafe through shared memories."
+msgstr ""
+
+#: .\templates\base.html:79
+msgid "Quick Links"
+msgstr ""
+
+#: .\templates\base.html:81
+msgid "Home"
+msgstr ""
+
+#: .\templates\base.html:82
+msgid "Share Memory"
+msgstr ""
+
+#: .\templates\base.html:86
+msgid "Connect"
+msgstr ""
+
+#: .\templates\landing\home.html:12
+msgid "Discover the Magic of Sufi Cafe"
+msgstr ""
+
+#: .\templates\landing\home.html:13
+msgid "Share your special moments and connect with our community"
+msgstr ""
+
+#: .\templates\landing\home.html:15
+msgid "Join Now"
+msgstr ""
+
+#: .\templates\landing\home.html:17
+msgid "Explore Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:27
+msgid "Recent Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:28
+msgid "Moments shared by our community"
+msgstr ""
+
+#: .\templates\landing\home.html:38
+msgid "View"
+msgstr ""
+
+#: .\templates\landing\home.html:57
+msgid "View All Memories"
+msgstr ""
+
+#: .\templates\landing\home.html:66
+msgid "Upcoming Events"
+msgstr ""
+
+#: .\templates\landing\home.html:67
+msgid "Join us for these special gatherings"
+msgstr ""
+
+#: .\templates\landing\home.html:84
+msgid "Details"
 msgstr ""

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block content %}
+<!-- Login Section -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg rounded-4 p-4">
+  
+          <h3 class="text-center mb-4">{% trans "Login" %}</h3>
+  
+          <form action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token %}
+  
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" placeholder="{% trans 'Email' %}">
+            </div>
+  
+            <div class="mb-3">
+              <input type="password" name="password" class="form-control" placeholder="{% trans 'Password' %}">
+            </div>
+  
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+              {% trans "Login" %}
+            </button>
+          </form>
+  
+          <div class="text-center mb-2 text-muted">
+            — {% trans "or" %} —
+          </div>
+  
+          <a href="#" class="btn btn-outline-danger w-100 mb-3">
+            <i class="bi bi-google me-2"></i> {% trans "Login with Google" %}
+          </a>
+  
+          <div class="text-center">
+            <small>
+              {% trans "Don't have an account?" %}
+              <a href="{% url 'accounts:register' %}">{% trans "Register here" %}</a>
+            </small>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+
+{% endblock %}
+  

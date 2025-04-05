@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg rounded-4 p-4">
+
+        <h3 class="text-center mb-4">{% trans "Create Account" %}</h3>
+
+        <form action="{% url 'accounts:register' %}" method="post">
+          {% csrf_token %}
+
+          <div class="row g-2 mb-3">
+            <div class="col-md-6">
+              <input type="text" name="first_name_en" class="form-control" placeholder="{% trans 'First Name (EN)' %}">
+            </div>
+            <div class="col-md-6">
+              <input type="text" name="first_name_ar" class="form-control" placeholder="{% trans 'First Name (AR)' %}">
+            </div>
+          </div>
+
+          <div class="row g-2 mb-3">
+            <div class="col-md-6">
+              <input type="text" name="last_name_en" class="form-control" placeholder="{% trans 'Last Name (EN)' %}">
+            </div>
+            <div class="col-md-6">
+              <input type="text" name="last_name_ar" class="form-control" placeholder="{% trans 'Last Name (AR)' %}">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="{% trans 'Email' %}">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" name="password" class="form-control" placeholder="{% trans 'Password' %}">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" name="confirm_password" class="form-control" placeholder="{% trans 'Confirm Password' %}">
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 mb-3">
+            {% trans "Register" %}
+          </button>
+        </form>
+
+        <div class="text-center mb-2 text-muted">
+          — {% trans "or" %} —
+        </div>
+
+        <a href="#" class="btn btn-outline-danger w-100 mb-3">
+          <i class="bi bi-google me-2"></i> {% trans "Register with Google" %}
+        </a>
+
+        <div class="text-center">
+          <small>
+            {% trans "Already have an account?" %}
+            <a href="{% url 'accounts:login' %}">{% trans "Login here" %}</a>
+          </small>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

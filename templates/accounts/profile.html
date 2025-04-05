@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+{% load i18n %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block content %}
+<h1>{% trans "welcome" %} {{ user.get_full_name }}</h1>
+
+<p>{% trans "email" %} {{ user.email }}</p>
+<p>{% trans "last_name_en" %} {{ user.first_name_en }}</p>
+<p>{% trans "last_name_en" %} {{ user.last_name_en }}</p>
+{% endblock %}

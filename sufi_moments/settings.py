@@ -124,6 +124,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+USERNAME_FIELD = 'email'
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 LANGUAGE_CODE = 'en'  # Default language
@@ -158,6 +164,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # For file uploads
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+LOGIN_URL = 'landing:login'
+LOGIN_REDIRECT_URL = 'landing:dashbord' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
