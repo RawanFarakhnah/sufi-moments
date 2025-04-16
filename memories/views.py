@@ -12,7 +12,7 @@ def memory_create(request):
             memory.user = request.user
             memory.save()
             messages.success(request, _('Memory created successfully!'))
-            return redirect('list')
+            return redirect('landing:dashbord')
     else:
         form = MemoryForm()
     
@@ -27,7 +27,7 @@ def memory_update(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, _('Memory updated successfully!'))
-            return redirect('list')
+            return redirect('landing:dashbord')
     else:
         form = MemoryForm(instance=memory)
     

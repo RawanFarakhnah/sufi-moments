@@ -39,7 +39,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'memories:list' %}">{% trans "Memories" %}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'landing:dashbord' %}">{% trans "Memories" %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'events:event_list' %}">{% trans "Events" %}</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
@@ -81,7 +81,7 @@
                     <h5>{% trans "Quick Links" %}</h5>
                     <ul class="list-unstyled">
                         <li><a href="{% url 'landing:home' %}" class="text-white">{% trans "Home" %}</a></li>
-                        <li><a href="{% url 'memories:memory_create' %}" class="text-white">{% trans "Share Memory" %}</a></li>
+                        <li><a href="{% url 'memories:create' %}" class="text-white">{% trans "Share Memory" %}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">

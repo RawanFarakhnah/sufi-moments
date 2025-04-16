@@ -54,10 +54,18 @@ INSTALLED_APPS = [
     'events',
     'memories',
     'landing',
-    'bootstrap5',
+    'bootstrap5'
+
+    'django.contrib.sites',
+    #Third-Party Apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,6 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 USERNAME_FIELD = 'email'
@@ -164,8 +173,38 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # For file uploads
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Login uploads
 LOGIN_URL = 'landing:login'
-LOGIN_REDIRECT_URL = 'landing:dashbord' 
+LOGIN_REDIRECT_URL = 'landing:dashbord'
+LOGOUT_REDIRECT_URL = 'landing:home' 
+
+# Add these allauth settings
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
+SOCIALACCOUNT_AUTO_SIGNUP = True
+
+
+# Google OAuth settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'APP': {
+            ''
+            '': os.getenv('GOOGLE_CLIENT_ID'),
+            'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
+            'key': ''
+        }
+    }
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
